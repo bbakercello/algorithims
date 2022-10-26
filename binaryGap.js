@@ -99,31 +99,29 @@ function numToBin(num){
 
 
 function solution(N) {
-    // write your code in JavaScript (Node.js 4.0.0)
     
-    var number = N;
-    var binary = '';
-    var counter = -1;
-    var max = 0;
-    while(number > 0) {
-        var digit = number % 2;
-        
+    
+    let binary = '';
+    let sum = 0;
+    let result = 1;
+    while(N > 0) {
+        let digit = N % 2;
+        //
         if(digit === 1) {
-            if(counter > max) {
-                max = counter;
+            if(sum > result) {
+                result = sum;
             }
-            counter = 0;
-        } else if(counter >= 0) {
-            counter++;
+            sum = 1;
+        } else if(sum >= 1) {
+            sum++;
         }
         
+        // put digit at beginning of binary (so not to reverse)
         binary = '' + digit + binary;
-        number = parseInt(number / 2);
+        N = parseInt(N / 2);
     }
     
-    //console.log('number, binary:', number, binary);
-    
-    return max;
+    return result
 }
 
 
