@@ -8,10 +8,28 @@ for each index
 
 
 const finBall = function(grid){
+    let col = 0
+    let row = 0
     let array = []
     for(let i = 0; i < grid.length; i ++){
         for(let j = 0; j < grid[i].length; j++){
-            if(j )
+            if(grid[i][j]== 1 && grid[i][j+1] == -1){
+                array.push(-1)
+                break
+            }
+            else if (grid[i][j] == 1 && grid[i][j+1]== 1){
+                i+=1
+                j+=1
+                console.log('continue')
+            }
+            else if(i = grid.length - 1){
+                array.push(1)
+            }
+        }
+    }
+        return array
+}
+
             // if(grid[i][0] == -1 && i == 0){
             //     array.push(-1)
             //     j++
@@ -36,7 +54,5 @@ const finBall = function(grid){
             // )
             // }
         
-    }return array
-}
 
 console.log(finBall([[1,1,1,-1,-1],[1,1,1,-1,-1],[-1,-1,-1,1,1],[1,1,1,1,-1],[-1,-1,-1,-1,-1]]))
