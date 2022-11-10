@@ -10,7 +10,6 @@ def twoSum(nums: list[int], target: int) -> list[int]:
             elif nums[i] + nums[j] == target:
                 result += f"({nums[i]},{nums[j]}),"
     return result
-
 print(twoSum(nums = [0,1,2,3,4,5,6,7,8,9,10],target = 6))
             
         
