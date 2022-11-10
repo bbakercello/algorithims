@@ -34,14 +34,21 @@ def phoneWords(n:  int, words: list[str]):
     nums = str(n)
     nums = nums.split()
     x = 0
+    s = ''
     ## convert words to a number
-    for i in words:
+    for i in range(len(words)):
         for j in words[x]:
             if j in key.values():
                 j = val_list.index(j)
                 z = key_list[j]
-            print(z)
+                s += f'{z}'
+            print(s)
         x+=1
+        
+        
+    
+
+
 
     ## compare the two numbers
 
