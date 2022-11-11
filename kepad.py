@@ -28,16 +28,13 @@ def phoneWords(n:  int, words: list[str]):
         'z': '9',
     }
    
-
     nums = str(n)
-
-    x = 0
     s = ''
     array = []
 
     ## convert words to a number
     for i in range(len(words)):
-        for j in words[x]:
+        for j in words[i]:
              if j in key.keys():
                 j = key.get(j)
                 s += f'{j}'
