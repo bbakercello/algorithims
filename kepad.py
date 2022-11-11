@@ -46,6 +46,6 @@ def phoneWords(n:  int, words: list[str]):
             array.append(int(s))
         s = ''
         x+=1
-    print(array)
+    return(array)
 
 print(phoneWords(n = 3662277, words = ['foo','baz','bar']))
