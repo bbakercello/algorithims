@@ -28,5 +28,5 @@ def threeSum(nums: List[int]) -> List[List[int]]:
                         lower += 1
                 else:
                     upper -= 1
-        return(list(set(triplets)))
+        return(triplets)
         
