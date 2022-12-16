@@ -17,7 +17,7 @@ class Solution:
                     if i > start and nums[i] == nums[i-1]:
                         continue
                     quad.append(nums[i])
-                    helper(k-1,i+1,target - nums[i])
+                    kSum(k-1,i+1,target - nums[i])
                     quad.pop
                     return
             l, r = start, len(nums) -1
@@ -31,7 +31,8 @@ class Solution:
                     l += 1
                     while l < r and nums[l] == nums[l-1]:
                         l += 1
-        
+        kSum(4,0,target)
+        return res
         # if A + B + C + D <n, D+1
         # If index(D) == len - 1, C+=1 D=C+1
         # If index(C) == len - 2, B+=1, C=B+1, D= C+1
